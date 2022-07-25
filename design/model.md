@@ -28,3 +28,8 @@ initial state -> Cell -> state 1 -> Cell -> state 2
                   \/                 \/
               discarded            output
 ```
+# Hyperparameters
+- number of Conv2Ds
+- number of Conv2D filters
+- Conv2D kernel size
+- number of LSTM units
