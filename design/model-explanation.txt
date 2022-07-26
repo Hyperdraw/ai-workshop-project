@@ -1,0 +1,17 @@
+                frame0             frame1
+                  |                  |
+                  \/                 \/
+initial state -> Cell -> state 1 -> Cell -> state 2
+                  |                  |
+                  \/                 \/
+              discarded            output
+
+
+Conv2D -> Conv2D -> Conv2D -> LSTM
+
+Input shape: (frames, width, height, channels)
+Output shape: (actions,)
+
+Conv2d(width, height, channels) -> (width, height, filters)
+
+(frames, width, height, channels) -> Conv2D -> Conv2D -> Conv2D -> (frames, width, height, filters) -> Reshape -> (frames, width * height * filters) -> LSTM -> (actions,)
